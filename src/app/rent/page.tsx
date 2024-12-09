@@ -10,7 +10,15 @@ import {
 import { BsMoonFill } from "react-icons/bs";
 import { CiLogout } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
+import Car1 from "../../../public/assests/car1.png";
+import Car2 from "../../../public/assests/car2.png";
+import Car3 from "../../../public/assests/car3.png";
+import Car4 from "../../../public/assests/car4.png";
+import MapsImg from "../../../public/assests/maps.png";
+import Rentalcar from "../../../public/assests/Rental.png";
 
+
+import Image from "next/image";
 const Rent = () => {
   return (
     <div className="w-[1440px] h-[900px] gap-5 items-center justify-center bg-[#F6F7F9] flex">
@@ -97,14 +105,20 @@ const Rent = () => {
         <div className="w-full h-[272px] rounded-lg mb-6 relative">
           {/* Simulated map and route */}
           <div className="absolute inset-0 flex justify-center items-center">
-          <img src="assests/maps.png.png" alt="maps" />
+            <Image 
+           src={MapsImg}
+           width={500}
+           height={300}
+            alt="maps" />
           </div>
         </div>
 
         {/* Car Info Section */}
         <div className="flex items-center gap-4 w-[132px] h-[72px] mb-6 ml-3">
-          <img
-            src="/assests/car2.png"
+          <Image
+            src={Car2}
+            width={300}
+            height={300}
             alt="Car"
             className="w-[116px] h-[40px] rounded-lg bg-[#3563E9]"
           />
@@ -251,7 +265,7 @@ const Rent = () => {
       <div className="right-section">
         <div className=" bg-white w-[524px] h-[324px] rounded-lg shadow-md p-6 mb-7">
           {/* Header */}
-          <img src="/assests/RentalCar.png" alt="" />
+          <Image src={Rentalcar} width={80} height={80} alt="" />
         </div>
         <div>
           <div className="w-[524px] h-[480px] bg-white rounded-xl shadow-md p-6">
@@ -269,8 +283,10 @@ const Rent = () => {
               {/* Transaction 1 */}
               <li className="flex justify-between items-center py-3 border-b border-gray-200 last:border-none">
                 <div className="flex items-center w-[132px] h-[70px]">
-                  <img
-                    src="/assests/car2.png"
+                  <Image
+                   src={Car2}
+                   width={150}
+                   height={60}
                     alt="Nissan GT – R"
                     className="w-[114px] h-[36px] rounded-md object-cover"
                   />
@@ -291,11 +307,13 @@ const Rent = () => {
               {/* Transaction 2 */}
               <li className="flex justify-between items-center py-3 border-b border-gray-200 last:border-none">
                 <div className="flex items-center w-[132px] h-[70px]">
-                  <img
-                    src="/assests/car1.png"
+                  <Image
+                  src={Car1}
+                  width={150}
+                  height={60}
                     alt="Koenigsegg"
                     className="w-[114px] h-[36px] rounded-md object-cover mr-4"
-                />
+                  />
                 </div>
 
                 <div className="w-[476px] h-[70px] flex justify-between items-center px-5">
@@ -306,51 +324,56 @@ const Rent = () => {
                     <p className="text-sm text-gray-500">Sport Car</p>
                   </div>
                   <div className="text-right">
-                  <p className="text-sm text-gray-500">19 July</p>
-                  <p className="text-sm font-medium text-gray-800">$99.00</p>
+                    <p className="text-sm text-gray-500">19 July</p>
+                    <p className="text-sm font-medium text-gray-800">$99.00</p>
+                  </div>
                 </div>
-                </div>
-                
               </li>
               {/* Transaction 3 */}
               <li className="flex justify-between items-center py-3 border-b border-gray-200 last:border-none">
                 <div className="flex items-center w-[132px] h-[70px]">
-                  <img
-                    src="/assests/car3.png"
+                  <Image
+                    src={Car3}
+                    width={150}
+                    height={60}
                     alt="Rolls – Royce"
                     className="w-[114px] h-[36px] rounded-md object-cover mr-4"
                   />
                 </div>
-                <div className="w-[476px] h-[70px] flex justify-between items-center px-5"><div className="w-[108px] h-[48px]">
+                <div className="w-[476px] h-[70px] flex justify-between items-center px-5">
+                  <div className="w-[108px] h-[48px]">
                     <p className="text-sm font-medium text-gray-800">
                       Rolls-Royce
                     </p>
                     <p className="text-sm text-gray-500">Sport Car</p>
                   </div>
                   <div className="text-right">
-                  <p className="text-sm text-gray-500">18 July</p>
-                  <p className="text-sm font-medium text-gray-800">$96.00</p>
-                </div></div>
-                
+                    <p className="text-sm text-gray-500">18 July</p>
+                    <p className="text-sm font-medium text-gray-800">$96.00</p>
+                  </div>
+                </div>
               </li>
               {/* Transaction 4 */}
               <li className="flex justify-between items-center py-3 border-b border-gray-200 last:border-none">
                 <div className="flex items-center w-[132px] h-[70px]">
-                  <img
-                    src="/assests/car4.png"
+                  <Image
+                    src={Car4}
+                    width={150}
+                    height={60}
                     alt="CR – V"
                     className="w-[114px] h-[36px] rounded-md object-cover mr-4"
                   />
                 </div>
-                <div className="w-[476px] h-[70px] flex justify-between items-center px-5"><div>
+                <div className="w-[476px] h-[70px] flex justify-between items-center px-5">
+                  <div>
                     <p className="text-sm font-medium text-gray-800">CR – V</p>
                     <p className="text-sm text-gray-500">SUV</p>
                   </div>
                   <div className="text-right">
-                  <p className="text-sm text-gray-500">17 July</p>
-                  <p className="text-sm font-medium text-gray-800">$80.00</p>
-                </div></div>
-                
+                    <p className="text-sm text-gray-500">17 July</p>
+                    <p className="text-sm font-medium text-gray-800">$80.00</p>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
