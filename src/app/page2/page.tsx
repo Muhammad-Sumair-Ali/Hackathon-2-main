@@ -81,7 +81,7 @@ const Page2 = () => {
                 />
               </div>
               {/* Max Price */}
-              <p className="text-sm text-[#131313]">Max. $100.00</p>
+              <p className="text-sm text-[#131313]">Max $100.00</p>
             </div>
           </div>
         </div>

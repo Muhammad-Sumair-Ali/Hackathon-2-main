@@ -3,6 +3,8 @@ import { FaChevronDown } from "react-icons/fa";
 import { FaPaypal, FaBitcoin } from "react-icons/fa";
 import { BsShieldCheck } from "react-icons/bs";
 import { AiFillStar } from "react-icons/ai";
+import Car2 from '../../../public/assests/car2.png'
+import Image from 'next/image';
 
 
 const Payment = () => {
@@ -210,7 +212,7 @@ const Payment = () => {
             <label className="ml-3 text-sm font-medium text-gray-800">Credit Card</label>
           </div>
           <div className="flex gap-2">
-            <img
+            {/* <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_2021.svg/1200px-Visa_2021.svg.png"
               alt="Visa"
               className="h-6"
@@ -219,7 +221,7 @@ const Payment = () => {
               src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg"
               alt="Mastercard"
               className="h-6"
-            />
+            /> */}
           </div>
         </div>
 
@@ -360,7 +362,7 @@ const Payment = () => {
       {/* Car Details */}
       <div className="flex items-center gap-4 mb-6">
         <div className="w-[96px] h-[72px] bg-[#3563E9] rounded-lg flex justify-center items-center">
-        <img src="/assests/car2.png" alt="" className='w-[88px] h-auto' />
+        <Image src={Car2} width={200 } height={200} alt='image' className='w-[88px] h-auto' />
         </div>
         <div>
           <h3 className="text-[32px] font-bold text-[#1A202C]">Nissan GT – R</h3>

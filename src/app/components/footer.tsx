@@ -51,7 +51,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="mt-10 border-t pt-6 flex flex-col sm:flex-row justify-between items-center">
           <span className="text-gray-600 text-base font-semibold">
-            © 2022 <Link href="#">MORENT</Link>. All Rights Reserved.
+             2022 <Link href="#">MORENT</Link> All Rights Reserved.
           </span>
           <div className="flex space-x-6 text-gray-600 mt-4 sm:mt-0 text-base font-semibold">
             <p className="hover:underline cursor-pointer">Privacy Policy</p>

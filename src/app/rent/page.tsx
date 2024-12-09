@@ -124,7 +124,7 @@ const Rent = () => {
           />
           <div>
             <h3 className="text-lg font-semibold text-[#1A202C]">
-              Nissan GT – R
+              Nissan GT  R
             </h3>
             <p className="text-sm text-gray-500">Sport Car</p>
           </div>
@@ -287,14 +287,14 @@ const Rent = () => {
                    src={Car2}
                    width={150}
                    height={60}
-                    alt="Nissan GT – R"
+                    alt="Nissan GT R"
                     className="w-[114px] h-[36px] rounded-md object-cover"
                   />
                 </div>
                 <div className="w-[476px] h-[70px] flex justify-between items-center px-5">
                   <div>
                     <p className="text-sm font-medium text-gray-800">
-                      Nissan GT – R
+                      Nissan GT  R
                     </p>
                     <p className="text-sm text-gray-500">Sport Car</p>
                   </div>
@@ -336,7 +336,7 @@ const Rent = () => {
                     src={Car3}
                     width={150}
                     height={60}
-                    alt="Rolls – Royce"
+                    alt="Rolls  Royce"
                     className="w-[114px] h-[36px] rounded-md object-cover mr-4"
                   />
                 </div>
@@ -360,13 +360,13 @@ const Rent = () => {
                     src={Car4}
                     width={150}
                     height={60}
-                    alt="CR – V"
+                    alt="CR  V"
                     className="w-[114px] h-[36px] rounded-md object-cover mr-4"
                   />
                 </div>
                 <div className="w-[476px] h-[70px] flex justify-between items-center px-5">
                   <div>
-                    <p className="text-sm font-medium text-gray-800">CR – V</p>
+                    <p className="text-sm font-medium text-gray-800">CR  V</p>
                     <p className="text-sm text-gray-500">SUV</p>
                   </div>
                   <div className="text-right">

@@ -2,6 +2,17 @@ import Link from 'next/link';
 import { FaHeart } from "react-icons/fa";
 import { MdLocalGasStation } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
+import { carsdatafour } from '../data/data';
+import Image from 'next/image';
+import Car2 from '../../../public/assests/car2.png'
+import View1 from '../../../public/assests/view1.png'
+import View2 from '../../../public/assests/view2.png'
+import View3 from '../../../public/assests/view2.png'
+import ProfileImage from '../../../public/assests/profill.1.png'
+import ProfileImage2 from '../../../public/assests/profill.2.png'
+
+
+
 
 const Page3 = () => {
   return (
@@ -91,7 +102,11 @@ RIGHT SECTION */}
     <div className='right-section m-6 flex flex-col h-[508px]'>
       {/* Car Image and Text */}
       <div className='car2 w-[492px] h-[360px] bg-[#3563E9] rounded-xl relative'>
-        <img src="/assests/car2.png" alt="Car2" className='absolute bottom-2 left-1/2 transform -translate-x-1/2' />
+        <Image src={Car2}
+          
+        
+            width={200}
+            height={200} alt="Car2" className='absolute bottom-2 left-1/2 transform -translate-x-1/2' />
         <div className='text-car text-[#FFFFFF] w-[372px] h-[160px] absolute top-6 left-6 space-y-4'>
           <p className='font-semibold text-[32px] leading-snug'>Sports car with the best design and acceleration</p>
           <p className='font-medium text-base'>Safety and comfort while driving a futuristic and elegant sports car.</p>
@@ -101,10 +116,25 @@ RIGHT SECTION */}
       {/* Images */}
       <div className='flex rounded-lg justify-around'>
         <div className='border-2 w-[148px] h-[124px] border-spacing-1 border-[#3563E9] rounded-lg mt-2 flex items-center justify-center'>
-          <img src="assests/view1.png.png" alt="" className='w-[132px] h-[108px]'/>
+          <Image  src={View1}
+            alt="carImage"
+            unoptimized
+            width={200}
+            height={200} className='w-[132px] h-[108px]'/>
         </div>
-        <div><img src="assests/view2.png.png" alt="" className='m-2 w-[148px] h-[124px]'/></div>
-        <div className='w-[148px] h-[124px] border-1'><img src="assests/view3.png.png" alt="" className='m-2 w-[148px] h-[124px]' /></div>
+        <div><Image  src={View2}
+            alt="carImage"
+            unoptimized
+            width={200}
+            height={200} className='m-2 w-[148px] h-[124px]'/></div>
+        <div className='w-[148px] h-[124px] border-1'>
+          <Image
+       src={View3}
+       alt="carImage"
+       unoptimized
+       width={200}
+       height={200}
+         className='m-2 w-[148px] h-[124px]' /></div>
       </div>
     </div>
 
@@ -176,7 +206,11 @@ RIGHT SECTION */}
       {/* Review 1 */}
       <div className="flex justify-between items-start space-x-4">
         <div className="flex items-start space-x-4">
-          <img src="/assests/profill.1.png" alt="Alex Stanton" className="w-12 h-12 rounded-full object-cover" />
+          <Image src={ProfileImage}
+          
+            unoptimized
+            width={200}
+            height={200} alt="Alex Stanton" className="w-12 h-12 rounded-full object-cover" />
           <div>
             <h3 className="text-xl font-bold text-[#1A202C]">Alex Stanton</h3>
             <p className="text-sm text-gray-500 font-normal">CEO at Bukalapak</p>
@@ -189,7 +223,11 @@ RIGHT SECTION */}
       {/* Review 2 */}
       <div className="flex justify-between items-start space-x-4">
         <div className="flex items-start space-x-4">
-          <img src="/assests/profill.2.png" alt="Skylar Dias" className="w-12 h-12 rounded-full object-cover" />
+          <Image src={ProfileImage2}
+          
+          unoptimized
+          width={200}
+          height={200}  alt="Skylar Dias" className="w-12 h-12 rounded-full object-cover" />
           <div>
             <h3 className="text-xl font-bold text-[#1A202C]">Skylar Dias</h3>
             <p className="text-sm text-gray-50 font-normal0">CEO at Amazon</p>
@@ -216,7 +254,8 @@ RIGHT SECTION */}
     </div>
     <div className="grid grid-cols-3 h-[388px] gap-10">
       {/* Card 1 */}
-      <div className="card1 w-[304px] h-[388px] bg-white rounded-lg shadow-md p-4 relative">
+      {carsdatafour?.map((car) => (
+        <div key={car.id} className="card1 w-[304px] h-[388px] bg-white rounded-lg shadow-md p-4 relative">
         {/* Header */}
         <div className="flex justify-between items-center">
           <div>
@@ -230,9 +269,13 @@ RIGHT SECTION */}
 
         {/* Image */}
         <div className="flex items-center justify-center my-4 absolute inset-0 mb-12">
-          <img
-            src="/assests/car3.png"
-            alt="car3"
+          <Image
+
+            src={car.image}
+            alt="carImage"
+            unoptimized
+            width={200}
+            height={200}
             className="w-[200px] object-contain"
           />
         </div>
@@ -244,11 +287,11 @@ RIGHT SECTION */}
             <span>90L</span>
           </div>
           <div className="flex items-center gap-1">
-            <img src="/assests/manual.png" alt="Gear" className="w-4 h-4" />
+            <Image src={car.manual}  width={10} height={10} alt="Gear" className="w-4 h-4" />
             <span>Manual</span>
           </div>
           <div className="flex items-center gap-[2px]">
-            <img src="/assests/people.png" alt="People" className="w-4 h-4" />
+            <Image src={car.people} width={10} height={10} alt="People" className="w-4 h-4" />
             <span>2 People</span>
           </div>
         </div>
@@ -265,107 +308,9 @@ RIGHT SECTION */}
           </button>
         </div>
       </div>
-
-      {/* Card 2 */}
-      <div className="card2 w-[304px] h-[388px] bg-white rounded-lg shadow-md p-4 relative">
-        {/* Header */}
-        <div className="flex justify-between items-center">
-          <div>
-            <h3 className="text-lg font-semibold text-[#131313]">Nissan GT-R</h3>
-            <p className="text-sm text-[#6B6B6B]">Sport</p>
-          </div>
-          <button className="text-red-500 text-xl">
-            <FaHeart />
-          </button>
-        </div>
-
-        {/* Image */}
-        <div className="flex items-center justify-center my-4 absolute inset-0 mb-12">
-          <img
-            src="/assests/car2.png"
-            alt="car3"
-            className="w-[200px] object-contain"
-          />
-        </div>
-
-        {/* Features */}
-        <div className="flex justify-between text-sm text-[#6B6B6B] my-4 absolute bottom-1/4 gap-7">
-          <div className="flex items-center gap-1">
-            <MdLocalGasStation className="w-4 h-4" />
-            <span>90L</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <img src="/assests/manual.png" alt="Gear" className="w-4 h-4" />
-            <span>Manual</span>
-          </div>
-          <div className="flex items-center gap-[2px]">
-            <img src="/assests/people.png" alt="People" className="w-4 h-4" />
-            <span>2 People</span>
-          </div>
-        </div>
-
-        {/* Price and Button */}
-        <div className="flex justify-center items-center absolute bottom-10 gap-4">
-          <div className="w-[116px] h-[44px]">
-            <p className="text-lg font-bold text-[#131313]">
-              $80.00 <span className="text-sm text-[#6B6B6B]">/day</span>
-            </p>
-          </div>
-          <button className="bg-[#3563E9] text-white w-[114px] h-[44px] text-sm px-4 py-2 rounded-md shadow self-end">
-            Rent Now
-          </button>
-        </div>
-      </div>
-{/* Card 3 */}
-<div className="card1 w-[304px] h-[388px] bg-white rounded-lg shadow-md p-4 relative">
-        {/* Header */}
-        <div className="flex justify-between items-center">
-          <div>
-            <h3 className="text-lg font-semibold text-[#131313]">Rolls-Royce</h3>
-            <p className="text-sm text-[#6B6B6B]">Sedan</p>
-          </div>
-          <button className="text-red-500 text-xl">
-            <FaHeart />
-          </button>
-        </div>
-
-        {/* Image */}
-        <div className="flex items-center justify-center my-4 absolute inset-0 mb-12">
-          <img
-            src="/assests/car4.png"
-            alt="car3"
-            className="w-[200px] object-contain"
-          />
-        </div>
-
-        {/* Features */}
-        <div className="flex justify-between text-sm text-[#6B6B6B] my-4 absolute bottom-1/4 gap-7">
-          <div className="flex items-center gap-1">
-            <MdLocalGasStation className="w-4 h-4" />
-            <span>70L</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <img src="/assests/manual.png" alt="Gear" className="w-4 h-4" />
-            <span>Manual</span>
-          </div>
-          <div className="flex items-center gap-[2px]">
-            <img src="/assests/people.png" alt="People" className="w-4 h-4" />
-            <span>2 People</span>
-          </div>
-        </div>
-
-        {/* Price and Button */}
-        <div className="flex justify-center items-center absolute bottom-10 gap-4">
-          <div className="w-[116px] h-[44px]">
-            <p className="text-lg font-bold text-[#131313]">
-              $96.00 <span className="text-sm text-[#6B6B6B]">/day</span>
-            </p>
-          </div>
-          <button className="bg-[#3563E9] text-white w-[114px] h-[44px] text-sm px-4 py-2 rounded-md shadow self-end">
-            Rent Now
-          </button>
-        </div>
-       </div></div>
+      ))}
+       
+       </div>
 
        {/* SECOND CAR LINE  */}
           {/* CARDS SECTION */}
@@ -377,12 +322,13 @@ RIGHT SECTION */}
     </div>
     <div className="grid grid-cols-3 h-[388px] gap-10">
       {/* Card 1 */}
-      <div className="card1 w-[304px] h-[388px] bg-white rounded-lg shadow-md p-4 relative">
+      {carsdatafour?.map((car) => (
+        <div key={car.id} className="card1 w-[304px] h-[388px] bg-white rounded-lg shadow-md p-4 relative">
         {/* Header */}
         <div className="flex justify-between items-center">
           <div>
-            <h3 className="text-lg font-semibold text-[#131313]">MG ZX Exclusive</h3>
-            <p className="text-sm text-[#6B6B6B]">Hatchback</p>
+            <h3 className="text-lg font-semibold text-[#131313]">Koenigsegg</h3>
+            <p className="text-sm text-[#6B6B6B]">Sport</p>
           </div>
           <button className="text-red-500 text-xl">
             <FaHeart />
@@ -391,110 +337,13 @@ RIGHT SECTION */}
 
         {/* Image */}
         <div className="flex items-center justify-center my-4 absolute inset-0 mb-12">
-          <img
-            src="/assests/car9.png"
-            alt="car3"
-            className="w-[200px] object-contain"
-          />
-        </div>
+          <Image
 
-        {/* Features */}
-        <div className="flex justify-between text-sm text-[#6B6B6B] my-4 absolute bottom-1/4 gap-7">
-          <div className="flex items-center gap-1">
-            <MdLocalGasStation className="w-4 h-4" />
-            <span>70L</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <img src="/assests/manual.png" alt="Gear" className="w-4 h-4" />
-            <span>Manual</span>
-          </div>
-          <div className="flex items-center gap-[2px]">
-            <img src="/assests/people.png" alt="People" className="w-4 h-4" />
-            <span>4 People</span>
-          </div>
-        </div>
-
-        {/* Price and Button */}
-        <div className="flex justify-center items-center absolute bottom-10 gap-4">
-          <div className="w-[116px] h-[44px]">
-            <p className="text-lg font-bold text-[#131313]">
-              $76.00 <span className="text-sm text-[#6B6B6B]">/day</span>
-            </p>
-          </div>
-          <button className="bg-[#3563E9] text-white w-[114px] h-[44px] text-sm px-4 py-2 rounded-md shadow self-end">
-            Rent Now
-          </button>
-        </div>
-      </div>
-
-      {/* Card 2 */}
-      <div className="card2 w-[304px] h-[388px] bg-white rounded-lg shadow-md p-4 relative">
-        {/* Header */}
-        <div className="flex justify-between items-center">
-          <div>
-            <h3 className="text-lg font-semibold text-[#131313]">New MG ZS</h3>
-            <p className="text-sm text-[#6B6B6B]">SUV</p>
-          </div>
-          <button className="text-red-500 text-xl">
-            <FaHeart />
-          </button>
-        </div>
-
-        {/* Image */}
-        <div className="flex items-center justify-center my-4 absolute inset-0 mb-12">
-          <img
-            src="/assests/car10.png"
-            alt="car3"
-            className="w-[200px] object-contain"
-          />
-        </div>
-
-        {/* Features */}
-        <div className="flex justify-between text-sm text-[#6B6B6B] my-4 absolute bottom-1/4 gap-7">
-          <div className="flex items-center gap-1">
-            <MdLocalGasStation className="w-4 h-4" />
-            <span>80L</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <img src="/assests/manual.png" alt="Gear" className="w-4 h-4" />
-            <span>Manual</span>
-          </div>
-          <div className="flex items-center gap-[2px]">
-            <img src="/assests/people.png" alt="People" className="w-4 h-4" />
-            <span>6 People</span>
-          </div>
-        </div>
-
-        {/* Price and Button */}
-        <div className="flex justify-center items-center absolute bottom-10 gap-4">
-          <div className="w-[116px] h-[44px]">
-            <p className="text-lg font-bold text-[#131313]">
-              $80.00 <span className="text-sm text-[#6B6B6B]">/day</span>
-            </p>
-          </div>
-          <button className="bg-[#3563E9] text-white w-[114px] h-[44px] text-sm px-4 py-2 rounded-md shadow self-end">
-            Rent Now
-          </button>
-        </div>
-      </div>
-{/* Card 3 */}
-<div className="card1 w-[304px] h-[388px] bg-white rounded-lg shadow-md p-4 relative">
-        {/* Header */}
-        <div className="flex justify-between items-center">
-          <div>
-            <h3 className="text-lg font-semibold text-[#131313]">MG ZX Excite</h3>
-            <p className="text-sm text-[#6B6B6B]">Hatchback</p>
-          </div>
-          <button className="text-red-500 text-xl">
-            <FaHeart />
-          </button>
-        </div>
-
-        {/* Image */}
-        <div className="flex items-center justify-center my-4 absolute inset-0 mb-12">
-          <img
-            src="/assests/car8.png"
-            alt="car3"
+            src={car.image}
+            alt="carImage"
+            unoptimized
+            width={200}
+            height={200}
             className="w-[200px] object-contain"
           />
         </div>
@@ -506,12 +355,12 @@ RIGHT SECTION */}
             <span>90L</span>
           </div>
           <div className="flex items-center gap-1">
-            <img src="/assests/manual.png" alt="Gear" className="w-4 h-4" />
+            <Image src={car.manual}  width={10} height={10} alt="Gear" className="w-4 h-4" />
             <span>Manual</span>
           </div>
           <div className="flex items-center gap-[2px]">
-            <img src="/assests/people.png" alt="People" className="w-4 h-4" />
-            <span>4 People</span>
+            <Image src={car.people} width={10} height={10} alt="People" className="w-4 h-4" />
+            <span>2 People</span>
           </div>
         </div>
 
@@ -519,14 +368,17 @@ RIGHT SECTION */}
         <div className="flex justify-center items-center absolute bottom-10 gap-4">
           <div className="w-[116px] h-[44px]">
             <p className="text-lg font-bold text-[#131313]">
-              $74.00 <span className="text-sm text-[#6B6B6B]">/day</span>
+              $99.00 <span className="text-sm text-[#6B6B6B]">/day</span>
             </p>
           </div>
           <button className="bg-[#3563E9] text-white w-[114px] h-[44px] text-sm px-4 py-2 rounded-md shadow self-end">
             Rent Now
           </button>
         </div>
-       </div></div>
+      </div>
+      ))}
+       
+       </div>
        </div>
        </div>
        </div>
